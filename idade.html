@@ -20,7 +20,7 @@
                 resultado = "adolescente";
             } else if (idade < 65) {
                 resultado = "adulto";
-            } else if(idade < 110){
+            } else if (idade < 110) {
                 resultado = "idoso";
             } else {
                 resultado = "Matusalém?";
@@ -35,7 +35,7 @@
             padding: 0px;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             font-style: oblique;
-            font-size: 24px;
+            font-size: 18px;
             border: 1px solid transparent;
             width: 80%;
         }
@@ -48,7 +48,7 @@
             flex-direction: column;
             text-align: center;
             align-items: center;
-            width: 50%;
+            /* width: 80%; */
             min-width: 30%;
             background-color: antiquewhite;
         }
@@ -83,6 +83,10 @@
         label {
             margin-right: 10px;
         }
+
+        input {
+            border: 2px solid #ff00002d;
+        }
     </style>
 </head>
 
@@ -94,12 +98,16 @@
         <div>
             <div class="row">
                 <label for="nome">Nome: </label>
-                <input onkeyup="idade()" id="nome" type="text" placeholder="Digite o nome da pessoa" value="Pessoa" />
+                <input size="20" onkeyup="idade()" id="nome" type="text" placeholder="Digite o nome da pessoa" value="Pessoa" />
             </div>
             <div class="row">
                 <label for="idade">Idade: </label>
-                <input onkeyup="idade()" id="idade" type="number" placeholder="Digite a idade da pessoa" value="22"/>
+                <input size="20" onkeyup="idade()" id="idade" type="number" placeholder="Digite a idade da pessoa" value="22" />
             </div>
+            <!-- <div class="row">
+                <label for="dtnasc">Data de Nascimento: </label>
+                <input size="20" onkeyup="idade()" id="dtnasc" type="date" placeholder="Digite a idade da pessoa" value="22" />
+            </div> -->
         </div>
         <!-- <button onclick="idade()">Enviar</button> -->
         <p id="resultado"></p>
