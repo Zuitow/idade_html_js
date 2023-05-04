@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html id="geral">
 
 <head>
     <meta charset="UTF-8">
@@ -7,11 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        function idade() {
+        function idade(e) {
             var resultado;
             var idade = parseInt(document.getElementById("idade").value);
             var nome = document.getElementById("nome").value;
-            // console.log(nome);
+            
             // console.log(idade);
 
             if (idade <= 11) {
@@ -37,7 +37,7 @@
             padding: 0px;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             font-style: oblique;
-            font-size: 18px;
+            font-size: 32px;
             border: 1px solid transparent;
             width: 80%;
         }
@@ -83,7 +83,7 @@
         }
 
         label {
-            margin-right: 10px;
+            margin-right: 1px;
         }
 
         input {
@@ -100,22 +100,25 @@
         <div>
             <div class="row">
                 <label for="nome">Nome: </label>
-                <input size="20" onkeyup="idade()" id="nome" type="text" placeholder="Digite o nome da pessoa" value="Pessoa" />
+                <input maxlength="10" size="20" oninput="idade()" id="nome" type="text"
+                    placeholder="Digite o nome da pessoa" value="Pessoa" />
             </div>
             <div class="row">
                 <label for="idade">Idade: </label>
-                <input size="20" onkeyup="idade()" id="idade" type="number" placeholder="Digite a idade da pessoa" value="22" />
+                <input maxlength="2" max="99" min="0" size="20" oninput="idade()" id="idade" type="number"
+                    placeholder="Digite a idade da pessoa" value="22" />
             </div>
-            <!-- <div class="row">
-                <label for="dtnasc">Data de Nascimento: </label>
-                <input size="20" onkeyup="idade()" id="dtnasc" type="date" placeholder="Digite a idade da pessoa" value="22" />
-            </div> -->
+
         </div>
+        <!-- <div class="row">
+            <label for="dtnasc">Data de Nascimento: </label>
+            <input size="20" onkeyup="idade()" id="dtnasc" type="date" placeholder="Digite a idade da pessoa" value="22" />
+        </div> -->
         <!-- <button onclick="idade()">Enviar</button> -->
         <p id="resultado"></p>
     </main>
     <footer>
-        <p style="text-align: center;">© 2023 - Marcio Denadai</p>
+        <p style="text-align: center;"><i>© 2023 - Marcio Denadai</i></p>
     </footer>
 </body>
 
