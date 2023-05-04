@@ -20,7 +20,7 @@
                 resultado = "adolescente";
             } else if (idade < 65) {
                 resultado = "adulto";
-            } else if(idade<110){
+            } else if(idade < 110){
                 resultado = "idoso";
             } else {
                 resultado = "Matusalém?";
@@ -94,14 +94,14 @@
         <div>
             <div class="row">
                 <label for="nome">Nome: </label>
-                <input id="nome" type="text" placeholder="Digite o nome da pessoa" value="Pessoa" />
+                <input onkeyup="idade()" id="nome" type="text" placeholder="Digite o nome da pessoa" value="Pessoa" />
             </div>
             <div class="row">
                 <label for="idade">Idade: </label>
-                <input id="idade" type="number" placeholder="Digite a idade da pessoa" value="22"/>
+                <input onkeyup="idade()" id="idade" type="number" placeholder="Digite a idade da pessoa" value="22"/>
             </div>
         </div>
-        <button onclick="idade()">Enviar</button>
+        <!-- <button onclick="idade()">Enviar</button> -->
         <p id="resultado"></p>
     </main>
     <footer>
