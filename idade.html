@@ -11,8 +11,8 @@
             var resultado;
             var idade = parseInt(document.getElementById("idade").value);
             var nome = document.getElementById("nome").value;
-            console.log(nome);
-            console.log(idade);
+            // console.log(nome);
+            // console.log(idade);
 
             if (idade <= 11) {
                 resultado = "criança";
@@ -22,8 +22,10 @@
                 resultado = "adulto";
             } else if (idade < 110) {
                 resultado = "idoso";
-            } else {
+            } else if (idade < 10 ** 200) {
                 resultado = "Matusalém?";
+            } else {
+                resultado = "?"
             }
             document.getElementById("resultado").innerHTML = nome + " é " + resultado;
         }
