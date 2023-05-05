@@ -14,7 +14,9 @@
             // console.log(nome);
             // console.log(idade);
 
-            if (idade <= 11) {
+            if (idade<0) {
+                resultado = "";
+            } else if (idade <= 11) {
                 resultado = "criança";
             } else if (idade <= 20) {
                 resultado = "adolescente";
