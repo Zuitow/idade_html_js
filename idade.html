@@ -8,28 +8,28 @@
     <title>Document</title>
     <script>
         function idade() {
-            var resultado;
+            var res;
             var idade = parseInt(document.getElementById("idade").value);
             var nome = document.getElementById("nome").value;
             // console.log(nome);
             // console.log(idade);
 
             if (idade<0) {
-                resultado = "(DIGITE UMA IDADE VÁLIDA)";
+                res = "(DIGITE UMA IDADE VÁLIDA)";
             } else if (idade <= 11) {
-                resultado = "criança";
+                res = "criança";
             } else if (idade <= 20) {
-                resultado = "adolescente";
+                res = "adolescente";
             } else if (idade < 65) {
-                resultado = "adulto";
+                res = "adulto";
             } else if (idade < 110) {
-                resultado = "idoso";
+                res = "idoso";
             } else if (idade < 10 ** 200) {
-                resultado = "Matusalém?";
+                res = "Matusalém?";
             } else {
-                resultado = "?"
+                res = "?"
             }
-            document.getElementById("resultado").innerHTML = nome + " é " + resultado;
+            document.getElementById("res").innerHTML = nome + " é " + res;
         }
     </script>
 
@@ -95,11 +95,12 @@
 </head>
 
 <body>
-    <header>
-        <h1 style="font-size: 48px;">Classificação por idade</h1>
+    <header>        
+        <h1 style="font-size: 48px;">Classificação por idade</h1>    
     </header>
     <main>
         <div>
+
             <div class="row">
                 <label for="nome">Nome: </label>
                 <input size="20" onkeyup="idade()" id="nome" type="text" placeholder="Digite o nome da pessoa" value="Pessoa" />
@@ -114,7 +115,7 @@
             </div> -->
         </div>
         <!-- <button onclick="idade()">Enviar</button> -->
-        <p id="resultado"></p>
+        <p id="res"></p>
     </main>
     <footer>
         <p style="text-align: center;">© 2023 - Marcio Denadai</p>
